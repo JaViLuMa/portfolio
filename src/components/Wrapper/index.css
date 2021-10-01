@@ -1,0 +1,14 @@
+.main-container {
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  width: 80vw;
+  color: white;
+  border: 5px solid #00ff00;
+  border-image: repeating-linear-gradient(
+    to bottom,
+    #00ff00,
+    #121212 1px,
+    #00ff00 5px,
+    #121212 1px
+  ) 1;
+}
