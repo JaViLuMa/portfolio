@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 
-import { Title } from '../';
+import { Title, AboutMe } from '../';
 
 import './index.css';
 
@@ -8,6 +8,7 @@ const Wrapper:FC = () => {
   return (
     <div className="main-container">
       <Title />
+      <AboutMe />
     </div>
   );
 }

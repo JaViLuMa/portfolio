@@ -1,0 +1,6 @@
+.about-me-container {
+  width: 80%;
+  display: grid;
+  grid-template-columns: auto auto;
+  margin: 5rem auto;
+}
