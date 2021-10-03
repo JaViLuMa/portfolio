@@ -2,7 +2,6 @@
   margin-top: 10vh;
   margin-bottom: 10vh;
   width: 80vw;
-  color: white;
   border: 5px solid #00ff00;
   border-image: repeating-linear-gradient(
     to bottom,
@@ -17,4 +16,60 @@
     hsla(120, 100%, 70%, 0.2) -15px 15px,
     hsla(120, 100%, 79%, 0.1) -20px 20px,
     hsla(120, 100%, 89%, 0.05) -25px 25px;
+  border-radius: 2px;
+  animation: boxShadowFader 1.25s infinite;
+  animation-fill-mode: forwards;
+}
+
+@media (prefers-reduced-motion) {
+  .main-container {
+    animation-name: dissolve;
+  }
+}
+
+@keyframes boxShadowFader {
+  20% {
+    box-shadow:
+      hsla(120, 100%, 50%, 0.05) -5px 5px,
+      hsla(120, 100%, 60%, 0.1) -10px 10px,
+      hsla(120, 100%, 70%, 0.2) -15px 15px,
+      hsla(120, 100%, 79%, 0.25) -20px 20px,
+      hsla(120, 100%, 89%, 0.3) -25px 25px;
+  }
+
+  40% {
+    box-shadow:
+      hsla(120, 100%, 50%, 0.1) -5px 5px,
+      hsla(120, 100%, 60%, 0.15) -10px 10px,
+      hsla(120, 100%, 70%, 0.15) -15px 15px,
+      hsla(120, 100%, 79%, 0.2) -20px 20px,
+      hsla(120, 100%, 89%, 0.25) -25px 25px;
+  }
+
+  60% {
+    box-shadow:
+      hsla(120, 100%, 50%, 0.25) -5px 5px,
+      hsla(120, 100%, 60%, 0.2) -10px 10px,
+      hsla(120, 100%, 70%, 0.15) -15px 15px,
+      hsla(120, 100%, 79%, 0.2) -20px 20px,
+      hsla(120, 100%, 89%, 0.25) -25px 25px;
+  }
+
+  80% {
+    box-shadow:
+      hsla(120, 100%, 50%, 0.3) -5px 5px,
+      hsla(120, 100%, 60%, 0.25) -10px 10px,
+      hsla(120, 100%, 70%, 0.1) -15px 15px,
+      hsla(120, 100%, 79%, 0.15) -20px 20px,
+      hsla(120, 100%, 89%, 0.2) -25px 25px;
+  }
+
+  100% {
+    box-shadow:
+      hsla(120, 100%, 50%, 0.4) -5px 5px,
+      hsla(120, 100%, 60%, 0.3) -10px 10px,
+      hsla(120, 100%, 70%, 0.2) -15px 15px,
+      hsla(120, 100%, 79%, 0.1) -20px 20px,
+      hsla(120, 100%, 89%, 0.05) -25px 25px;
+  }
 }

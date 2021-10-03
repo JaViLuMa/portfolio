@@ -1,0 +1,10 @@
+.about-me-container-text {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
+.about-me-container-text__paragraph {
+  color: white;
+  text-align: left;
+}
