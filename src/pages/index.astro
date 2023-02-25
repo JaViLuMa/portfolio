@@ -1,0 +1,43 @@
+---
+import supabase from 'supabaseClient';
+
+import Layout from '../layouts/Layout.astro';
+
+import AboutMe from 'components/AboutMe';
+import ContactMe from 'components/ContactMe';
+import CV from 'components/CV';
+import Me from 'components/Me';
+import Misc from 'components/Misc';
+import ProjectsWorkedOn from 'components/ProjectsWorkedOn';
+
+const { data: meData, error: meError } = await supabase.from('me').select();
+
+const { data: aboutMeData, error: aboutMeError } = await supabase
+  .from('aboutMe')
+  .select();
+
+const { data: contactMeData, error: contactMeError } = await supabase
+  .from('contactMe')
+  .select();
+
+const { data: projectsWorkedOnData, error: projectsWorkedOnError } =
+  await supabase.from('projects').select();
+
+const { data: miscData, error: miscError } = await supabase
+  .from('experience')
+  .select();
+
+const { data: cvData, error: cvError } = await supabase.from('cv').select();
+---
+
+<Layout>
+  <AboutMe data={aboutMeData ?? []} error={aboutMeError} />
+  <Me data={meData ?? []} error={meError} client:load />
+  <ContactMe data={contactMeData ?? []} error={contactMeError} client:load />
+  <ProjectsWorkedOn
+    data={projectsWorkedOnData ?? []}
+    error={projectsWorkedOnError}
+  />
+  <Misc data={miscData ?? []} error={miscError} />
+  <CV data={cvData ?? []} error={cvError} />
+</Layout>
