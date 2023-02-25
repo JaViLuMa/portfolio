@@ -8,7 +8,7 @@ import type { CVProps } from './CV.types';
 import Typography from '../Typography';
 
 const CV: FC<CVProps> = ({ data: cv, error }) => (
-  <div className="m-auto h-full w-full border border-black bg-philippine-yellow py-6 px-12 grid-in-cv dark:border-white dark:bg-lemon-glacier">
+  <div className="flex h-full w-full items-center justify-center border border-black bg-philippine-yellow py-6 px-12 grid-in-cv dark:border-white dark:bg-lemon-glacier">
     <a
       href={!error && cv.length && cv[0]?.link ? cv[0].link : CV_FALLBACK}
       rel="noopener noreferrer"
