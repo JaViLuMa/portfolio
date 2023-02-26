@@ -1,1 +1,1 @@
-export const CV_FALLBACK = 'https://www.linkedin.com/in/matejruzic/';
+export default { LINK: 'https://www.linkedin.com/in/matejruzic/' };

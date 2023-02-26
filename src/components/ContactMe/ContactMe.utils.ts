@@ -4,11 +4,11 @@ export default (widthLessThan1280: boolean, isHovered: boolean) => {
 
   if (widthLessThan1280) {
     return standard;
-  } else {
-    if (isHovered) {
-      return 'bg-philippine-yellow scrollbar dark:bg-lemon-glacier xl:justify-start xl:overflow-x-auto xl:scrollbar-thumb-black xl:dark:scrollbar-thumb-white';
-    }
-
-    return standard;
   }
+
+  if (!widthLessThan1280 && isHovered) {
+    return 'bg-philippine-yellow scrollbar dark:bg-lemon-glacier xl:justify-start xl:overflow-x-auto xl:scrollbar-thumb-black xl:dark:scrollbar-thumb-white';
+  }
+
+  return standard;
 };

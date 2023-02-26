@@ -1,4 +1,5 @@
-export const EXPERIENCES_FALLBACK = `
+export default {
+  EXPERIENCE: `
 ##### Programming #####
 
 Type/JavaScript\\
@@ -21,4 +22,5 @@ Fast adaptability\\
 Love to learn\\
 Working in team\\
 High motivation\\
-Advancing existing knowledge and experiences`;
+Advancing existing knowledge and experiences`,
+};

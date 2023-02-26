@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import type { FC } from 'react';
 
 import cn from 'utils/cn';
@@ -15,11 +16,7 @@ const Typography: FC<TypographyProps> = ({
   ...rest
 }) =>
   asLink ? (
-    <a
-      rel={isExternal ? 'noopener noreferrer' : undefined}
-      target={isExternal ? '_blank' : '_self'}
-      href={href}
-    >
+    <a rel="noopener noreferrer" target={isExternal ? '_blank' : '_self'} href={href}>
       <Tag className={cn('font-clash', className)} {...rest}>
         {label || children}
       </Tag>

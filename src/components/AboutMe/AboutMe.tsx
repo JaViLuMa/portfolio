@@ -3,7 +3,7 @@ import ReactMarkdown from 'react-markdown';
 
 import Typography from 'components/Typography';
 
-import { ABOUT_ME_DESCRIPTION_FALLBACK } from './AboutMe.constants';
+import ABOUT_ME_FALLBACK from './AboutMe.constants';
 import type { AboutMeProps } from './AboutMe.types';
 
 import Header from '../Header';
@@ -25,7 +25,7 @@ const AboutMe: FC<AboutMeProps> = ({ data: aboutMeData, error }) => (
         >
           {!error && aboutMeData.length && aboutMeData[0]?.description
             ? aboutMeData[0].description
-            : ABOUT_ME_DESCRIPTION_FALLBACK}
+            : ABOUT_ME_FALLBACK.DESCRIPTION}
         </ReactMarkdown>
       </div>
     </main>

@@ -3,9 +3,9 @@ import type { Contact } from 'components/ContactMe/ContactMe.types';
 const bottomBorderLogic = (contacts: Contact[], index: number) => {
   if (contacts.length % 2 === 0) {
     return index < contacts.length - 2 ? 'border-b' : '';
-  } else {
-    return index < contacts.length - 1 ? 'border-b' : '';
   }
+
+  return index < contacts.length - 1 ? 'border-b' : '';
 };
 
 export default (contacts: Contact[], index: number) => {

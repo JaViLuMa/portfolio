@@ -1,6 +1,6 @@
 import { useState, type FC } from 'react';
 
-import { DATABASE_ERROR } from 'constants/textFallback';
+import ERROR from 'constants/textFallback';
 import cn from 'utils/cn';
 
 import MeDots from './components/MeDots';
@@ -18,9 +18,7 @@ const Me: FC<MeProps> = ({ data: images, error }) => {
   };
 
   const handlePreviousImage = () => {
-    setCurrentImageIndex(
-      (currentImageIndex + images.length - 1) % images.length
-    );
+    setCurrentImageIndex((currentImageIndex + images.length - 1) % images.length);
   };
 
   const handleDotClick = (index: number) => {
@@ -44,9 +42,7 @@ const Me: FC<MeProps> = ({ data: images, error }) => {
             next={handleNextImage}
             prev={handlePreviousImage}
             dotClick={handleDotClick}
-            keys={images.map((image) => ({
-              id: image.id,
-            }))}
+            keys={images.map((image) => ({ id: image.id }))}
             currentImageIndex={currentImageIndex}
           />
           <div className="flex min-h-[288px] w-full flex-col items-center justify-center gap-3 border-t border-black px-7 py-14 dark:border-white md:gap-7 md:border-t-0">
@@ -56,16 +52,14 @@ const Me: FC<MeProps> = ({ data: images, error }) => {
             />
             <MeDots
               variant="desktop"
-              keys={images.map((image) => ({
-                id: image.id,
-              }))}
+              keys={images.map((image) => ({ id: image.id }))}
               currentImageIndex={currentImageIndex}
               dotClick={handleDotClick}
             />
           </div>
         </>
       ) : (
-        <Typography Tag="p" className="text-2xl" label={DATABASE_ERROR} />
+        <Typography Tag="p" className="text-2xl" label={ERROR.DATABASE} />
       )}
     </div>
   );

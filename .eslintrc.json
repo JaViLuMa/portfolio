@@ -9,8 +9,7 @@
     "plugin:@typescript-eslint/recommended",
     "airbnb",
     "airbnb/hooks",
-    "airbnb-typescript",
-    "plugin:prettier/recommended"
+    "airbnb-typescript"
   ],
   "parser": "@typescript-eslint/parser",
   "plugins": ["@typescript-eslint", "import"],
@@ -39,6 +38,9 @@
     ],
     "object-curly-newline": ["error", { "multiline": true }],
     "@typescript-eslint/comma-dangle": "off",
-    "operator-linebreak": "off"
+    "operator-linebreak": "off",
+    "no-confusing-arrow": "off",
+    "implicit-arrow-linebreak": "off",
+    "@typescript-eslint/indent": "off"
   }
 }
