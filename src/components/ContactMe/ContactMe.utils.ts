@@ -7,7 +7,7 @@ export default (widthLessThan1280: boolean, isHovered: boolean) => {
   }
 
   if (!widthLessThan1280 && isHovered) {
-    return 'bg-philippine-yellow scrollbar dark:bg-lemon-glacier xl:justify-start xl:overflow-x-auto xl:scrollbar-thumb-black xl:dark:scrollbar-thumb-white';
+    return 'bg-philippine-yellow scrollbar dark:bg-lemon-glacier xl:grid xl:grid-flow-col xl:justify-start xl:auto-cols-[50%] xl:overflow-x-scroll xl:scrollbar-thumb-black xl:dark:scrollbar-thumb-white';
   }
 
   return standard;

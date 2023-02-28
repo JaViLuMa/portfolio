@@ -19,7 +19,7 @@ const Contacts: FC<ContactsProps> = ({ contacts, error }) =>
           rel="noopener noreferrer"
           className={cn(
             applyContactsBorderClassName(contacts, index),
-            'flex w-full flex-col items-center justify-center gap-[14px] py-2 px-1 xl:h-full xl:min-w-[180px] xl:cursor-contact xl:border-y-0 xl:border-x xl:first:border-l-0 xl:last:border-r-0'
+            'flex w-full flex-col items-center justify-center gap-[14px] py-2 px-1 xl:h-full xl:w-auto xl:cursor-contact xl:border-y-0 xl:border-x xl:first:border-l-0 xl:last:border-r-0'
           )}
         >
           {iconsMap.get(contact.value) || iconsMap.get('email')}

@@ -22,16 +22,12 @@ export default (contacts: Contact[], index: number) => {
   }
 
   if (index === contacts.length - 1 && contacts.length % 2 !== 0) {
-    classes.push('col-span-full');
+    classes.push('col-span-full', 'xl:col-auto');
   }
 
   if (index > 1) {
     classes.push('border-t');
   }
 
-  return [
-    ...classes,
-    'border-black dark:border-white',
-    bottomBorderLogic(contacts, index),
-  ];
+  return [...classes, 'border-black dark:border-white', bottomBorderLogic(contacts, index)];
 };

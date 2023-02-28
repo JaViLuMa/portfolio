@@ -1,9 +1,12 @@
+/* eslint-disable import/no-extraneous-dependencies */
+/* eslint-disable global-require */
+/* eslint-disable @typescript-eslint/no-var-requires */
 /** @type {import('tailwindcss').Config} */
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const plugin = require('tailwindcss/plugin');
 
 module.exports = {
+  darkMode: 'class',
   content: ['./src/**/*.{astro,html,js,jsx,ts,tsx}'],
   theme: {
     extend: {
@@ -54,9 +57,7 @@ module.exports = {
           'cv',
         ],
       },
-      gridTemplateColumns: {
-        layout: '50% 30% 20%',
-      },
+      gridTemplateColumns: { layout: '50% 30% 20%' },
       gridTemplateRows: {
         layout: '144px 2fr 320px',
         'layout-mobile': 'repeat(8, minmax(min-content,max-content))',
@@ -81,15 +82,9 @@ module.exports = {
       };
 
       const transformCenter = {
-        '.transform-center-x': {
-          transform: 'translateX(-50%)',
-        },
-        '.transform-center-y': {
-          transform: 'translateY(-50%)',
-        },
-        '.transform-center': {
-          transform: 'translate(-50%, -50%)',
-        },
+        '.transform-center-x': { transform: 'translateX(-50%)' },
+        '.transform-center-y': { transform: 'translateY(-50%)' },
+        '.transform-center': { transform: 'translate(-50%, -50%)' },
       };
 
       matchUtilities(
@@ -99,9 +94,7 @@ module.exports = {
             'box-shadow': `0.2rem 0.2rem 0 0 ${modifier}`,
           }),
         },
-        {
-          values: theme('colors'),
-        }
+        { values: theme('colors') }
       );
 
       matchUtilities(
@@ -111,9 +104,7 @@ module.exports = {
             'box-shadow': `0.4rem 0.4rem 0 0 ${modifier}`,
           }),
         },
-        {
-          values: theme('colors'),
-        }
+        { values: theme('colors') }
       );
 
       addUtilities(textStroke);
